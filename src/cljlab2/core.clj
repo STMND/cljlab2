@@ -34,7 +34,6 @@
   (put! input-chan 2)
   (put! input-chan 3)
   (put! input-chan 1)
-  (close! input-chan))
 
 (go
   (copy-unique-values input-chan output-chan))
