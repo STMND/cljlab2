@@ -24,6 +24,9 @@
 (def output-chan (chan))
 
 (go
+  (copy-unique-values input-chan output-chan))
+
+(go
   (put! input-chan 0)
   (put! input-chan 2)
   (put! input-chan 0)
@@ -34,9 +37,6 @@
   (put! input-chan 2)
   (put! input-chan 3)
   (put! input-chan 1)
-
-(go
-  (copy-unique-values input-chan output-chan))
 
 (go
   (loop []
