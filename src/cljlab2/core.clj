@@ -36,7 +36,7 @@
   (put! input-chan :reset)
   (put! input-chan 2)
   (put! input-chan 3)
-  (put! input-chan 1)
+  (put! input-chan 1))
 
 (go
   (loop []
